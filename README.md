@@ -39,7 +39,7 @@ tree -a read-app   # or: ls -a read-app
 cat read-app/pom.xml
 ```
 
-## OPTION 2: Use the spring CLI to create projects from catalogsand to add functionality to an existing app
+## 3. OPTION 2: Use the spring CLI to create projects from catalogsand to add functionality to an existing app
 
 You can add repos to the spring CLI catalog to make it easier to create new projects
 
