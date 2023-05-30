@@ -1,12 +1,11 @@
 # spring-cli-dapr-catalog
 
 This README explains how to:
-1. Install the spring CLI
-2. Use the spring CLI to create projects from git repos
-3. Use the spring CLI to create projects from catalogs
-4. [COMING SOON] Use the spring CLI to add functionality to an existing app
+1. SETUP: Install the spring CLI
+2. OPTION 1: Use the spring CLI to create projects from git repos
+3. OPTION 2: Use the spring CLI to create projects from catalogs and to add functionality to an existing app
 
-## 1. Install the Spring CLI
+## 1. SETUP: Install the Spring CLI
 
 #### Get the spring CLI (build from new to get the most recent code):
 > Note: Replace `<YOUR_CURRENT_DIR>` with the proper value below.
@@ -18,7 +17,7 @@ alias spring='java -jar <YOUR_CURRENT_DIR>/build/libs/spring-cli-0.0.1-SNAPSHOT.
 cd ..
 ```
 
-## 2. Use the spring CLI to create projects from git repos
+## 2. OPTION 1: Use the spring CLI to create projects from git repos
 
 #### Create a new directory and cd into it. Directory name is arbitrary.
 ```
@@ -40,7 +39,7 @@ tree -a read-app   # or: ls -a read-app
 cat read-app/pom.xml
 ```
 
-## Use the spring CLI to create projects from catalogs
+## OPTION 2: Use the spring CLI to create projects from catalogsand to add functionality to an existing app
 
 You can add repos to the spring CLI catalog to make it easier to create new projects
 
@@ -69,6 +68,7 @@ spring project list
 #### Create new project from CLI catalog
 
 ```
+spring boot new statestore-read --package-name com.xkcd.dapr --name read-app
 spring boot new pub-sub-subscriber --package-name com.xkcd.dapr --name subscriber-app
 spring boot new statestore-and-pub-sub-write --package-name com.xkcd.dapr --name write-app
 ```
@@ -79,9 +79,14 @@ $ ls
 read-app	subscriber-app	write-app
 ```
 
-## [COMING SOON] Use the spring CLI to add functionality to an existing app
+### Add functionality to an existing app
 
-The spring CLI enables you to add functionality to an application.
-To showcase this functionality for the [sample Dapr application](https://github.com/salaboy/dapr-testcontainers) used here, the code for statestore and pub-sub in the write application needs to be separated so that it is more composable.
-This way, one can create a new application from the write-statestore and later *add* pub-sub functionality to the same application using `spring boot add` (see `spring boot add --help` for reference information).
+It is also possible to add functionality from one app to another, rather than create two separate apps.
+For example:
+```
+cd write-app
+spring boot add pub-sub-subscriber
+```
+
+You should see the files of the two apps are merged.
 
