@@ -2,7 +2,7 @@
 project-repositories:
 - name: "statestore-read"
   description: "Dapr app for reading from a statestore."
-  url: "https://github.com/salaboy/dapr-testcontainers?subPath=read-app"
+  url: "https://github.com/ciberkleid/dapr-testcontainers?subPath=read-app"
   tags:
   - "java-17"
   - "boot-3.1.x"
@@ -10,7 +10,7 @@ project-repositories:
   - "statestore"
 - name: "pub-sub-subscriber"
   description: "Dapr app for subscribing to a statestore using pub-sub."
-  url: "https://github.com/salaboy/dapr-testcontainers?subPath=subscriber-app"
+  url: "https://github.com/ciberkleid/dapr-testcontainers?subPath=subscriber-app"
   tags:
   - "java-17"
   - "boot-3.1.x"
@@ -19,7 +19,7 @@ project-repositories:
   - "pub-sub"
 - name: "statestore-and-pub-sub-write"
   description: "Dapr app for writing to a statestore and creating a pub-sub notification."
-  url: "https://github.com/salaboy/dapr-testcontainers?subPath=write-app"
+  url: "https://github.com/ciberkleid/dapr-testcontainers?subPath=write-app"
   tags:
   - "java-17"
   - "boot-3.1.x"
