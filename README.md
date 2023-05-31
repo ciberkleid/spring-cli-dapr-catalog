@@ -151,7 +151,7 @@ dapr-subscriber-app
 dapr-write-app
 ```
 
-### Merge projects
+#### Merge projects
 
 Merge projects using the `spring boot add` command.
 ```shell
