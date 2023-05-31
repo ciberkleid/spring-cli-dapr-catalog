@@ -8,13 +8,12 @@ This README explains how to:
 ## 1. Install the Spring CLI
 
 #### Get the spring CLI (build from new to get the most recent code):
-> Note: Replace `<YOUR_CURRENT_DIR>` with the proper value below.
 ```shell
-git clone https://github.com/spring-projects-experimental/spring-cli
-cd spring-cli
+git clone https://github.com/spring-projects-experimental/spring-cli $HOME/temp/spring-cli
+CURRENT_DIR=$PWD && cd $HOME/temp/spring-cli
 ./gradlew clean build -x test
-alias spring='java -jar <YOUR_CURRENT_DIR>/build/libs/spring-cli-0.0.1-SNAPSHOT.jar'
-cd ..
+alias spring='java -jar $HOME/temp/spring-cli/build/libs/spring-cli-0.0.1-SNAPSHOT.jar'
+cd $CURRENT_DIR
 ```
 
 ## 2. Create/merge projects from git URLs
